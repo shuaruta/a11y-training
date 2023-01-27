@@ -152,3 +152,27 @@ Web アプリケーションではボタンに文字を表示せず、アイコ�
     onClick={() => window.alert('いいね取消しました')}
   />
 </div>
+
+### アイコンのボタンの説明が重複しない
+
+#### 良い例: 説明が重複しない
+
+<div className={styles.example}>
+  <IconButton
+    ariaLabel="編集"
+    text="編集"
+    IconComponent={MdEdit}
+    onClick={() => window.alert('編集')}
+  />
+</div>
+
+#### 悪い例: 説明が重複する
+
+<div className={styles.example}>
+  <IconButton
+    iconLabel="編集"
+    text="編集"
+    IconComponent={MdEdit}
+    onClick={() => window.alert('編集')}
+  />
+</div>
