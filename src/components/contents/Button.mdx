@@ -84,18 +84,6 @@ Web アプリケーションではボタンに文字を表示せず、アイコ�
     ariaLabel="削除"
     onClick={() => window.alert('削除')}
   />
-  <IconButton
-    IconComponent={MdFavoriteBorder}
-    ariaLabel="いいね"
-    ariaPressed="false"
-    onClick={() => window.alert('いいねしました')}
-  />
-  <IconButton
-    IconComponent={MdFavorite}
-    ariaLabel="いいね"
-    ariaPressed="true"
-    onClick={() => window.alert('いいね取消しました')}
-  />
 </div>
 
 #### 悪い例: アイコンのボタンに代替テキストがない
@@ -109,14 +97,6 @@ Web アプリケーションではボタンに文字を表示せず、アイコ�
     onClick={() => window.alert('コピー')}
   />
   <IconButton IconComponent={MdDelete} onClick={() => window.alert('削除')} />
-  <IconButton
-    IconComponent={MdFavoriteBorder}
-    onClick={() => window.alert('いいねしました')}
-  />
-  <IconButton
-    IconComponent={MdFavorite}
-    onClick={() => window.alert('いいね取消しました')}
-  />
 </div>
 
 #### 悪い例: アイコンのボタンが `<span>` で実装されていて、代替テキストがない（虚空）
@@ -133,11 +113,41 @@ Web アプリケーションではボタンに文字を表示せず、アイコ�
     IconComponent={MdDelete}
     onClick={() => window.alert('削除')}
   />
-  <FakeIconButton
+</div>
+
+### アイコンのボタンの状態がわかるようにする
+
+#### 良い例: ボタンに `aria-pressed` による状態がついている
+
+トグルボタンの「押されています」「押されていません」の状態を知覚できます。
+
+<div className={styles.example}>
+  <IconButton
+    IconComponent={MdFavoriteBorder}
+    ariaLabel="いいね"
+    ariaPressed="false"
+    onClick={() => window.alert('いいねしました')}
+  />
+  <IconButton
+    IconComponent={MdFavorite}
+    ariaLabel="いいね"
+    ariaPressed="true"
+    onClick={() => window.alert('いいね取消しました')}
+  />
+</div>
+
+#### 悪い例: ボタンに状態がない
+
+ボタンがどういう状態かを知覚できません。
+
+<div className={styles.example}>
+  <IconButton
+    ariaLabel="いいね"
     IconComponent={MdFavoriteBorder}
     onClick={() => window.alert('いいねしました')}
   />
-  <FakeIconButton
+  <IconButton
+    ariaLabel="いいね"
     IconComponent={MdFavorite}
     onClick={() => window.alert('いいね取消しました')}
   />
