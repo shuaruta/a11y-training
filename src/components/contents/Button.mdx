@@ -109,6 +109,14 @@ Web アプリケーションではボタンに文字を表示せず、アイコ�
     onClick={() => window.alert('コピー')}
   />
   <IconButton IconComponent={MdDelete} onClick={() => window.alert('削除')} />
+  <IconButton
+    IconComponent={MdFavoriteBorder}
+    onClick={() => window.alert('いいねしました')}
+  />
+  <IconButton
+    IconComponent={MdFavorite}
+    onClick={() => window.alert('いいね取消しました')}
+  />
 </div>
 
 #### 悪い例: アイコンのボタンが `<span>` で実装されていて、代替テキストがない（虚空）
@@ -124,5 +132,13 @@ Web アプリケーションではボタンに文字を表示せず、アイコ�
   <FakeIconButton
     IconComponent={MdDelete}
     onClick={() => window.alert('削除')}
+  />
+  <FakeIconButton
+    IconComponent={MdFavoriteBorder}
+    onClick={() => window.alert('いいねしました')}
+  />
+  <FakeIconButton
+    IconComponent={MdFavorite}
+    onClick={() => window.alert('いいね取消しました')}
   />
 </div>
