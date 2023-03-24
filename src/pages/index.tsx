@@ -11,6 +11,7 @@ import {
   Link,
   Button,
   Form,
+  ImageOfText,
 } from '../components/contents';
 import { publicPath } from '../utils/publicPath';
 
@@ -85,6 +86,7 @@ const Home: NextPage = () => {
           <Link />
           <Button />
           <Form />
+          <ImageOfText />
         </ContentsContext>
       </Main>
       <Footer>
