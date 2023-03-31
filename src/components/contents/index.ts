@@ -5,4 +5,5 @@ export { default as Introduction } from './Introduction.mdx';
 export { default as Keyboard } from './Keyboard.mdx';
 export { default as Link } from './Link.mdx';
 export { default as ScreenReader } from './ScreenReader.mdx';
+export { default as DecorativeImage } from './DecorativeImage.mdx';
 export { default as ImageOfText } from './ImageOfText.mdx';

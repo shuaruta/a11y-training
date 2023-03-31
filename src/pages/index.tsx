@@ -11,6 +11,7 @@ import {
   Link,
   Button,
   Form,
+  DecorativeImage,
   ImageOfText,
 } from '../components/contents';
 import { Footer } from '../components/Footer';
@@ -62,6 +63,7 @@ const Home: NextPage = () => {
           <Link />
           <Button />
           <Form />
+          <DecorativeImage />
           <ImageOfText />
         </ContentsContext>
       </Main>

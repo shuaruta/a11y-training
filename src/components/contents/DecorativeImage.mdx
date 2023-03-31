@@ -1,0 +1,17 @@
+import { ExampleContainer } from '../examples';
+import { MdLightbulb } from 'react-icons/md';
+import { IconWrapper } from '../parts/IconWrapper';
+
+## 情報や機能性を持たない画像
+
+### 良い例
+
+<ExampleContainer>
+<IconWrapper> <MdLightbulb /> </IconWrapper> 毎日のルーティンを見直して新しい自分を発見しましょう！
+</ExampleContainer>
+
+### 悪い例
+
+<ExampleContainer>
+<IconWrapper> <MdLightbulb aria-label="電球" /> </IconWrapper> 毎日のルーティンを見直して新しい自分を発見しましょう！
+</ExampleContainer>
