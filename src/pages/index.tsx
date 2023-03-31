@@ -13,6 +13,7 @@ import {
   Form,
   DecorativeImage,
   ImageOfText,
+  HeadingLevel,
 } from '../components/contents';
 import { Footer } from '../components/Footer';
 import { publicPath } from '../utils/publicPath';
@@ -63,6 +64,7 @@ const Home: NextPage = () => {
           <Link />
           <Button />
           <Form />
+          <HeadingLevel />
           <DecorativeImage />
           <ImageOfText />
         </ContentsContext>
